@@ -1,0 +1,18 @@
+function generateImage() {
+    const sequenceCode = document.getElementById('sequence-code').value;
+    const imageContainer = document.getElementById('image-container');
+    imageContainer.innerHTML = ''; // 清空之前的图片
+
+    // 假设图片地址是根据序列码拼接的
+    const imageUrl = `images/${sequenceCode}.jpg`;
+
+    // 创建图片元素
+    const img = document.createElement('img');
+    img.src = imageUrl;
+    img.alt = 'Generated Image';
+    img.style.maxWidth = '100%';
+    img.style.height = 'auto';
+
+    // 将图片添加到容器中
+    imageContainer.appendChild(img);
+}
